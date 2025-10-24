@@ -31,7 +31,6 @@ For this project, our research question will explore children's development prog
 6. Are there differences in progress between students of different races?
 
 
-
 ## 2. Data
 
 Text goes here. Place your data in the /data folder, and add dimensions and codebook to the README in that folder. Then print out the output of glimpse() or skim() of your data frame.

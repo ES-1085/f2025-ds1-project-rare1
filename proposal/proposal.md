@@ -21,7 +21,7 @@ support for children.
 To assess the students, Promise uses the GOLD assessment system. The
 GOLD system tracks students’ development over time in specific areas
 such as social-emotional, physical, cognitive, and language abilities.
-It tracks students on a widely held expectation(WHE) score to determine
+It tracks students on a widely held expectation (WHE) score to determine
 if they are below, meeting, or exceeding developmental expectations. The
 data collected is specifically targeted for students aged 0-5, and
 includes raw scores, scaled scores, and national norm comparison. This
@@ -30,31 +30,34 @@ plans and give individualized attention, all to support the children’s
 development.
 
 For this project, our research question will explore children’s
-development progress in the Promise Early Education program.
-Specifically, we will analyze the classroom progress of children with
-special needs (those who qualify for an Individual Education Program, or
-an IEP) and dual language learners, comparing their progress in the
-classroom with their peers. We hope that our results highlight how
-different student populations are supported and developed in classroom
-settings. Some questions we hope to investigate are:
+development progress in the Promise Early Education program. We will
+analyze and evaluate the developmental gains of three key populations:
+Dual Language Learners (DLLs), students receiving special education
+services (those with an Individualized Education Program, or IEP),
+multi-year participants, and students of different racial/ethnic
+backgrounds. By comparing the progress of these subgroups against their
+peers, this research aims to illuminate how different student
+populations are supported in the classroom. Some questions we hope to
+investigate are:
 
-1.  How does the progress of students with IEPs differ from their peers
-    without IEPs?
+1.  How does the progress of dual language learners differ from their
+    peers?
 
-2.  What are the effects of IEP students on non-IEP students in the
+2.  What are the weakest/strongest skill sets of dual language learners
+    compared to standard expectations (categorized by physical,
+    social-emotional, literacy, etc.)
+
+3.  How does the progress across a year differ for a multi-year student
+    compared to a first time student?
+
+4.  What are the effects of IEP students on non-IEP students in the
     classroom?
 
-3.  Are there differences in IEP student progress before and after
-    COVID-19?
+5.  How does growth for students compare by different seasons (fall to
+    winter, winter to spring)?
 
-4.  Are there differences in dual language learners’ progress before and
-    after COVID-19?
-
-5.  What are the differences between dual language learners and single
-    language students?
-
-6.  How do IEP students and non-IEP students compare to national
-    standards?
+6.  Are there differences in progress between students of different
+    races?
 
 ## 2. Data
 
@@ -83,4 +86,3 @@ question(s). (You can update these later as you work on your project.)
 # Code goes here
 # Code to calculate summary statistics
 # Code for a visualization
-```

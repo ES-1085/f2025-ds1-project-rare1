@@ -71,9 +71,28 @@ Because of the complex structure of the original dataset, we chose to clean and 
 
 
 ```{r}
-# Code goes here
-# Read in your data file
-# Print the output of glimpse() or skim()
+
+#GOLD assessment results for all EHS students
+dim(EHS_all_students)
+glimpse(EHS_all_students)
+
+```
+```{r}
+#GOLD assessment results for white vs. non-white EHS students
+dim(EHS_with_race)
+glimpse(EHS_with_race)
+```
+
+```{r}
+#GOLD assessment results for DLL vs non-DLL EHS students
+dim(EHS_Dual_Language)
+glimpse(EHS_Dual_Language)
+```
+
+```{r}
+#GOLD assessment results for multi-year vs first-year participating EHS students
+dim(EHS_multi_year)
+glimpse(EHS_multi_year)
 ```
 
 ## 3. Data analysis plan

@@ -1,6 +1,6 @@
 Project proposal
 ================
-Team name
+Team RARE
 
 ``` r
 library(tidyverse)
@@ -61,9 +61,54 @@ investigate are:
 
 ## 2. Data
 
-Text goes here. Place your data in the /data folder, and add dimensions
-and codebook to the README in that folder. Then print out the output of
-glimpse() or skim() of your data frame.
+Because of the complex structure of the original dataset, we chose to
+clean and organize the data in Google Sheets rather than R to simplify
+the reformatting process. Specifically, we created new columns
+indicating “yes” or “no” for Dual Language Learners, race, and
+multi-year students. We also cleaned by consolidating data from all
+Early Head Start (EHS) programs into unified columns, because the
+original dataset had some categories arranged in columns and others in
+rows.
+
+\#GOLD assessment results for all EHS students
+Promise_Early_Education_2024_2025_Data_CLEAN \<-
+read_excel(“data/ignore/Promise Early Education 2024-2025 Data-
+CLEAN.xlsx”, sheet = “EHS (birth-3)”)
+View(Promise_Early_Education_2024_2025_Data_CLEAN)
+
+\#GOLD assessment results for white vs. non-white EHS students
+Promise_Early_Education_2024_2025_Data_CLEAN \<-
+read_excel(“data/ignore/Promise Early Education 2024-2025 Data-
+CLEAN.xlsx”, sheet = “EHS Race”)
+View(Promise_Early_Education_2024_2025_Data_CLEAN)
+
+\#GOLD assessment results for DLL vs non-DLL EHS students
+Promise_Early_Education_2024_2025_Data_CLEAN \<-
+read_excel(“data/ignore/Promise Early Education 2024-2025 Data-
+CLEAN.xlsx”, sheet = “EHS Eng SE”)
+View(Promise_Early_Education_2024_2025_Data_CLEAN)
+
+\#GOLD assessment results for multi-year vs first-year participating EHS
+students Promise_Early_Education_2024_2025_Data_CLEAN \<-
+read_excel(“data/ignore/Promise Early Education 2024-2025 Data-
+CLEAN.xlsx”, sheet = “EHS MY-NMY”)
+View(Promise_Early_Education_2024_2025_Data_CLEAN)
+
+`Category` = `which aspect is being tested` `WHE Bottom` =
+`Bottom widely held expectation scores` `WHE Top` =
+`Top widely held expectation scores` `Average` = `Average scores`
+`# Children` = `Number of children being tested` `# Below` =
+`Number of students below average` `% Below` =
+`Percent of students below average` `# Meeting` =
+`Number of students meeting expectations` `% Meeting` =
+`Percentage of students meeting expectations` `# exceeding` =
+`Number of students exceeding expectations` `% exceeding` =
+`The percentage of students exceeding expectations` `Time period` =
+`Fall, winter, or spring trimesters` `Age range` =
+`The age range of the students` `White` =
+`If the student is white or not` `Dual Language` =
+`If the student is a dual language learner or not` `Multi-Year` =
+`If the student is a Multi-Year student or not`
 
 ``` r
 # Code goes here
@@ -81,6 +126,25 @@ with some explanation on how they help you learn more about your data.
 (You can add to these later as you work on your project.) - The data
 visualization(s) that you believe will be useful in exploring your
 question(s). (You can update these later as you work on your project.)
+
+The variables we will be visualizing to explore the research questions
+include: `Dual Language` `Dual Language`, `category`, and `Average`
+`Multi-year` X (TBD- waiting for IEP data) .`Time period` `White`
+
+Other data needed:
+
+We hope to explore IEP students’ development, but we are currently
+waiting for Early Head Start to upload the data for the 2024-2025 year.
+This will be variable number 6 which is TBD currently.
+
+Types of graphs we may want to use:
+
+-Line plot - to show the distribution of scores deviating away from the
+average for each `category` - Ridge plots - to compare differences among
+distinctions like race and language - Waffle plots - To compare
+multi-year and not multi-year students -Box Plot - showing the range of
+average scores -Bar Graph - to compare students meeting, exceeding, and
+below expectations
 
 ``` r
 # Code goes here

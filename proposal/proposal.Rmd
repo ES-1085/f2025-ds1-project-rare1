@@ -8,6 +8,25 @@ output: github_document
 library(tidyverse)
 library(broom)
 library(readxl)
+#GOLD assessment results for all EHS students
+Promise_Early_Education_2024_2025_Data_CLEAN <- read_excel("data/ignore/Promise Early Education 2024-2025 Data- CLEAN.xlsx", 
+    sheet = "EHS (birth-3)")
+View(Promise_Early_Education_2024_2025_Data_CLEAN)
+
+#GOLD assessment results for white vs. non-white EHS students
+Promise_Early_Education_2024_2025_Data_CLEAN <- read_excel("data/ignore/Promise Early Education 2024-2025 Data- CLEAN.xlsx", 
+    sheet = "EHS Race")
+View(Promise_Early_Education_2024_2025_Data_CLEAN)
+
+#GOLD assessment results for DLL vs non-DLL EHS students
+Promise_Early_Education_2024_2025_Data_CLEAN <- read_excel("data/ignore/Promise Early Education 2024-2025 Data- CLEAN.xlsx", 
+    sheet = "EHS Eng SE")
+View(Promise_Early_Education_2024_2025_Data_CLEAN)
+
+#GOLD assessment results for multi-year vs first-year participating EHS students
+Promise_Early_Education_2024_2025_Data_CLEAN <- read_excel("data/ignore/Promise Early Education 2024-2025 Data- CLEAN.xlsx", 
+    sheet = "EHS MY-NMY")
+View(Promise_Early_Education_2024_2025_Data_CLEAN)
 ## Add any additional packages you are using here
 ```
 
@@ -36,26 +55,6 @@ For this project, our research question will explore children's development prog
 ## 2. Data
 
 Because of the complex structure of the original dataset, we chose to clean and organize the data in Google Sheets rather than R to simplify the reformatting process. Specifically, we created new columns indicating “yes” or “no” for Dual Language Learners, race, and multi-year students. We also cleaned by consolidating data from all Early Head Start (EHS) programs into unified columns, because the original dataset had some categories arranged in columns and others in rows.
-
-#GOLD assessment results for all EHS students
-Promise_Early_Education_2024_2025_Data_CLEAN <- read_excel("data/ignore/Promise Early Education 2024-2025 Data- CLEAN.xlsx", 
-    sheet = "EHS (birth-3)")
-View(Promise_Early_Education_2024_2025_Data_CLEAN)
-
-#GOLD assessment results for white vs. non-white EHS students
-Promise_Early_Education_2024_2025_Data_CLEAN <- read_excel("data/ignore/Promise Early Education 2024-2025 Data- CLEAN.xlsx", 
-    sheet = "EHS Race")
-View(Promise_Early_Education_2024_2025_Data_CLEAN)
-
-#GOLD assessment results for DLL vs non-DLL EHS students
-Promise_Early_Education_2024_2025_Data_CLEAN <- read_excel("data/ignore/Promise Early Education 2024-2025 Data- CLEAN.xlsx", 
-    sheet = "EHS Eng SE")
-View(Promise_Early_Education_2024_2025_Data_CLEAN)
-
-#GOLD assessment results for multi-year vs first-year participating EHS students
-Promise_Early_Education_2024_2025_Data_CLEAN <- read_excel("data/ignore/Promise Early Education 2024-2025 Data- CLEAN.xlsx", 
-    sheet = "EHS MY-NMY")
-View(Promise_Early_Education_2024_2025_Data_CLEAN)
 
 
 `Category` = `which aspect is being tested` 

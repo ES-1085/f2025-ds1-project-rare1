@@ -9,19 +9,19 @@ library(tidyverse)
 library(broom)
 library(readxl)
 #GOLD assessment results for all EHS students
-EHS_all_students <- read_excel("data/ignore/Promise Early Education 2024-2025 Data- CLEAN.xlsx", 
+EHS_all_students <- read_excel("../data/ignore/Promise Early Education 2024-2025 Data- CLEAN.xlsx", 
     sheet = "EHS (birth-3)")
 
 #GOLD assessment results for white vs. non-white EHS students
-EHS_with_race <- read_excel("data/ignore/Promise Early Education 2024-2025 Data- CLEAN.xlsx", 
+EHS_with_race <- read_excel("../data/ignore/Promise Early Education 2024-2025 Data- CLEAN.xlsx", 
     sheet = "EHS Race")
 
 #GOLD assessment results for DLL vs non-DLL EHS students
-EHS_Dual_Language <- read_excel("data/ignore/Promise Early Education 2024-2025 Data- CLEAN.xlsx", 
+EHS_Dual_Language <- read_excel("../data/ignore/Promise Early Education 2024-2025 Data- CLEAN.xlsx", 
     sheet = "EHS Eng SE")
 
 #GOLD assessment results for multi-year vs first-year participating EHS students
-EHS_multi_year <- read_excel("data/ignore/Promise Early Education 2024-2025 Data- CLEAN.xlsx", 
+EHS_multi_year <- read_excel("../data/ignore/Promise Early Education 2024-2025 Data- CLEAN.xlsx", 
     sheet = "EHS MY-NMY")
 ```
 

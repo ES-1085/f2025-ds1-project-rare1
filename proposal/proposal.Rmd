@@ -4,7 +4,7 @@ author: "Team RARE"
 output: github_document
 ---
 
-```{r load-packages, message = FALSE}
+```{r load-packages-and-data, message = FALSE}
 library(tidyverse)
 library(broom)
 library(readxl)
@@ -70,26 +70,26 @@ Because of the complex structure of the original dataset, we chose to clean and 
 `Multi-Year` = `If the student is a Multi-Year student or not` 
 
 
-```{r}
+```{r dimensions-and-glimpse-all-students}
 
 #GOLD assessment results for all EHS students
 dim(EHS_all_students)
 glimpse(EHS_all_students)
 
 ```
-```{r}
+```{r dimension-and-glimpse-race}
 #GOLD assessment results for white vs. non-white EHS students
 dim(EHS_with_race)
 glimpse(EHS_with_race)
 ```
 
-```{r}
+```{r dimensions-and-glimpse-dll}
 #GOLD assessment results for DLL vs non-DLL EHS students
 dim(EHS_Dual_Language)
 glimpse(EHS_Dual_Language)
 ```
 
-```{r}
+```{r dimensions-and-glimpse-multi-year}
 #GOLD assessment results for multi-year vs first-year participating EHS students
 dim(EHS_multi_year)
 glimpse(EHS_multi_year)
@@ -123,10 +123,3 @@ Types of graphs we may want to use:
 -Box Plot - showing the range of average scores
 -Bar Graph - to compare students meeting, exceeding, and below expectations 
 
-
-
-```{r}
-# Code goes here
-# Code to calculate summary statistics
-# Code for a visualization
-```

@@ -8,6 +8,8 @@ output: github_document
 library(tidyverse)
 library(broom)
 library(readxl)
+install.packages("ggridges")
+library(ggridges)
 #GOLD assessment results for all EHS students
 EHS_all_students <- read_excel("../data/ignore/Promise Early Education 2024-2025 Data- CLEAN.xlsx", 
     sheet = "EHS (birth-3)")
@@ -118,8 +120,23 @@ We hope to explore IEP students' development, but we are currently waiting for E
 Types of graphs we may want to use:
 
 -Line plot - to show the distribution of scores deviating away from the average for each `category`
-- Ridge plots - to compare differences among distinctions like race and language
 - Waffle plots - To compare multi-year and not multi-year students 
 -Box Plot - showing the range of average scores
 -Bar Graph - to compare students meeting, exceeding, and below expectations 
+- Bar Graph - to compare differences among distinctions like race and language
 
+
+```{r preliminary-exploratory-data-analysis-bar-graph}
+EHS_with_race |>
+  mutate(Race_Group = if_else(`White (Yes or No)` == "Yes", "White", "Non-White")) |>
+  ggplot(aes(x = Category, y = Average, fill = Race_Group)) +
+  geom_col(position = "dodge")+
+  labs(
+    title = "Average GOLD Assessment Scores by Category and Race",
+    x = "Category",
+    y = "Average Score",
+    fill = "Race"
+  ) +
+  theme_minimal() 
+```
+Our first preliminary exploratory data analysis is a bar graph comparing GOLD assessment scores between races. This visualization shows that generally, scores are similar between races, but white students tend to do slightly better in each category, excluding mathematics, where non-white students preform better. Exploring this graph is useful as it showed us the limitations of what visualizations work and don't work with data regarding race, for example, a ridge plot would not be able to show this data because we don't have enough average data points.

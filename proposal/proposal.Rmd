@@ -99,12 +99,6 @@ glimpse(EHS_multi_year)
 
 ## 3. Data analysis plan
 
-Text goes here.
-- What variables will you visualize to explore your research questions?
-- Will there be any other data that you need to find to help with your research question?
-- Very preliminary exploratory data analysis, including some summary statistics and visualizations, along with some explanation on how they help you learn more about your data. (You can add to these later as you work on your project.)
-- The data visualization(s) that you believe will be useful in exploring your question(s). (You can update these later as you work on your project.)
-
 The variables we will be visualizing to explore the research questions include:
 `Dual Language`
 `Dual Language`, `category`, and `Average`

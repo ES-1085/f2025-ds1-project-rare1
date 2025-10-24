@@ -34,7 +34,23 @@ For this project, our research question will explore children's development prog
 
 ## 2. Data
 
-Text goes here. Place your data in the /data folder, and add dimensions and codebook to the README in that folder. Then print out the output of glimpse() or skim() of your data frame.
+`Category` = `which aspect is being tested` 
+`WHE Bottom` = `Bottom widely held expectation scores`
+`WHE Top` = `Top widely held expectation scores` 
+`Average` = `Average scores` 
+`# Children` = `Number of children being tested` 
+`# Below` = `Number of students below average`
+`% Below` = `Percent of students below average`
+`# Meeting` = `Number of students meeting expectations` 
+`% Meeting` = `Percentage of students meeting expectations` 
+` # exceeding` = `Number of students exceeding expectations` 
+`% exceeding` = `The percentage of students exceeding expectations`
+`Time period` = `Fall, winter, or spring trimesters` 
+`Age range` = `The age range of the students` 
+`White` = `If the student is white or not`
+`Dual Language` = `If the student is a dual language learner or not` 
+`Multi-Year` = `If the student is a Multi-Year student or not` 
+
 
 ```{r}
 # Code goes here

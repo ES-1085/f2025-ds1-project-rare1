@@ -9,25 +9,20 @@ library(tidyverse)
 library(broom)
 library(readxl)
 #GOLD assessment results for all EHS students
-Promise_Early_Education_2024_2025_Data_CLEAN <- read_excel("data/ignore/Promise Early Education 2024-2025 Data- CLEAN.xlsx", 
+EHS_all_students <- read_excel("data/ignore/Promise Early Education 2024-2025 Data- CLEAN.xlsx", 
     sheet = "EHS (birth-3)")
-View(Promise_Early_Education_2024_2025_Data_CLEAN)
 
 #GOLD assessment results for white vs. non-white EHS students
-Promise_Early_Education_2024_2025_Data_CLEAN <- read_excel("data/ignore/Promise Early Education 2024-2025 Data- CLEAN.xlsx", 
+EHS_with_race <- read_excel("data/ignore/Promise Early Education 2024-2025 Data- CLEAN.xlsx", 
     sheet = "EHS Race")
-View(Promise_Early_Education_2024_2025_Data_CLEAN)
 
 #GOLD assessment results for DLL vs non-DLL EHS students
-Promise_Early_Education_2024_2025_Data_CLEAN <- read_excel("data/ignore/Promise Early Education 2024-2025 Data- CLEAN.xlsx", 
+EHS_Dual_Language <- read_excel("data/ignore/Promise Early Education 2024-2025 Data- CLEAN.xlsx", 
     sheet = "EHS Eng SE")
-View(Promise_Early_Education_2024_2025_Data_CLEAN)
 
 #GOLD assessment results for multi-year vs first-year participating EHS students
-Promise_Early_Education_2024_2025_Data_CLEAN <- read_excel("data/ignore/Promise Early Education 2024-2025 Data- CLEAN.xlsx", 
+EHS_multi_year <- read_excel("data/ignore/Promise Early Education 2024-2025 Data- CLEAN.xlsx", 
     sheet = "EHS MY-NMY")
-View(Promise_Early_Education_2024_2025_Data_CLEAN)
-## Add any additional packages you are using here
 ```
 
 ## 1. Introduction

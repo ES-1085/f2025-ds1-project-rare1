@@ -6,6 +6,8 @@ Team RARE
 library(tidyverse)
 library(broom)
 library(readxl)
+install.packages("ggridges")
+library(ggridges)
 #GOLD assessment results for all EHS students
 EHS_all_students <- read_excel("../data/ignore/Promise Early Education 2024-2025 Data- CLEAN.xlsx", 
     sheet = "EHS (birth-3)")
@@ -214,15 +216,6 @@ glimpse(EHS_multi_year)
 
 ## 3. Data analysis plan
 
-Text goes here. - What variables will you visualize to explore your
-research questions? - Will there be any other data that you need to find
-to help with your research question? - Very preliminary exploratory data
-analysis, including some summary statistics and visualizations, along
-with some explanation on how they help you learn more about your data.
-(You can add to these later as you work on your project.) - The data
-visualization(s) that you believe will be useful in exploring your
-question(s). (You can update these later as you work on your project.)
-
 The variables we will be visualizing to explore the research questions
 include: `Dual Language` `Dual Language`, `category`, and `Average`
 `Multi-year` X (TBD- waiting for IEP data) .`Time period` `White`
@@ -236,14 +229,32 @@ This will be variable number 6 which is TBD currently.
 Types of graphs we may want to use:
 
 -Line plot - to show the distribution of scores deviating away from the
-average for each `category` - Ridge plots - to compare differences among
-distinctions like race and language - Waffle plots - To compare
-multi-year and not multi-year students -Box Plot - showing the range of
-average scores -Bar Graph - to compare students meeting, exceeding, and
-below expectations
+average for each `category` - Waffle plots - To compare multi-year and
+not multi-year students -Box Plot - showing the range of average scores
+-Bar Graph - to compare students meeting, exceeding, and below
+expectations - Bar Graph - to compare differences among distinctions
+like race and language
 
 ``` r
-# Code goes here
-# Code to calculate summary statistics
-# Code for a visualization
+EHS_with_race |>
+  mutate(Race_Group = if_else(`White (Yes or No)` == "Yes", "White", "Non-White")) |>
+  ggplot(aes(x = Category, y = Average, fill = Race_Group)) +
+  geom_col(position = "dodge")+
+  labs(
+    title = "Average GOLD Assessment Scores by Category and Race",
+    x = "Category",
+    y = "Average Score",
+    fill = "Race"
+  ) +
+  theme_minimal() 
 ```
+
+![](proposal_files/figure-gfm/preliminary-exploratory-data-analysis-bar-graph-1.png)<!-- -->
+Our first preliminary exploratory data analysis is a bar graph comparing
+GOLD assessment scores between races. This visualization shows that
+generally, scores are similar between races, but white students tend to
+do slightly better in each category, excluding mathematics, where
+non-white students preform better. Exploring this graph is useful as it
+showed us the limitations of what visualizations work and don’t work
+with data regarding race, for example, a ridge plot would not be able to
+show this data because we don’t have enough average data points.

@@ -87,21 +87,22 @@ Early Head Start (EHS) programs into unified columns, because the
 original dataset had some categories arranged in columns and others in
 rows.
 
-`Category` = `which aspect is being tested` `WHE Bottom` =
-`Bottom widely held expectation scores` `WHE Top` =
-`Top widely held expectation scores` `Average` = `Average scores`
-`# Children` = `Number of children being tested` `# Below` =
-`Number of students below average` `% Below` =
-`Percent of students below average` `# Meeting` =
-`Number of students meeting expectations` `% Meeting` =
-`Percentage of students meeting expectations` `# exceeding` =
-`Number of students exceeding expectations` `% exceeding` =
-`The percentage of students exceeding expectations` `Time period` =
-`Fall, winter, or spring trimesters` `Age range` =
-`The age range of the students` `White` =
-`If the student is white or not` `Dual Language` =
-`If the student is a dual language learner or not` `Multi-Year` =
-`If the student is a Multi-Year student or not`
+- `Category` = `which aspect is being tested`
+- `WHE Bottom` = `Bottom widely held expectation scores`
+- `WHE Top` = `Top widely held expectation scores`
+- `Average` = `Average scores`
+- `# Children` = `Number of children being tested`
+- `# Below` = `Number of students below average`
+- `% Below` = `Percent of students below average`
+- `# Meeting` = `Number of students meeting expectations`
+- `% Meeting` = `Percentage of students meeting expectations`
+- `# exceeding` = `Number of students exceeding expectations`
+- `% exceeding` = `The percentage of students exceeding expectations`
+- `Time period` = `Fall, winter, or spring trimesters`
+- `Age range` = `The age range of the students`
+- `White` = `If the student is white or not`
+- `Dual Language` = `If the student is a dual language learner or not`
+- `Multi-Year` = `If the student is a Multi-Year student or not`
 
 ``` r
 #GOLD assessment results for all EHS students
@@ -217,44 +218,70 @@ glimpse(EHS_multi_year)
 ## 3. Data analysis plan
 
 The variables we will be visualizing to explore the research questions
-include: `Dual Language` `Dual Language`, `category`, and `Average`
-`Multi-year` X (TBD- waiting for IEP data) .`Time period` `White`
+include:
 
-Other data needed:
+`Dual Language`
 
-We hope to explore IEP students’ development, but we are currently
-waiting for Early Head Start to upload the data for the 2024-2025 year.
-This will be variable number 6 which is TBD currently.
+`category`
+
+`Average`
+
+`Multi-year`
+
+X (TBD- waiting for IEP data)
+
+`Time period`
+
+`White`
 
 Types of graphs we may want to use:
 
--Line plot - to show the distribution of scores deviating away from the
-average for each `category` - Waffle plots - To compare multi-year and
-not multi-year students -Box Plot - showing the range of average scores
--Bar Graph - to compare students meeting, exceeding, and below
-expectations - Bar Graph - to compare differences among distinctions
-like race and language
+- Line plot : to show the distribution of scores deviating away from the
+  average for each `category`
+- Waffle plots : To compare multi-year and not multi-year students
+- Box Plot : showing the range of average scores
+- Bar Graph : to compare students meeting, exceeding, and below
+  expectations
+- Bar Graph : to compare differences among distinctions like race and
+  language
 
 ``` r
 EHS_with_race |>
   mutate(Race_Group = if_else(`White (Yes or No)` == "Yes", "White", "Non-White")) |>
-  ggplot(aes(x = Category, y = Average, fill = Race_Group)) +
-  geom_col(position = "dodge")+
+  group_by(Category, Race_Group) |>
+  summarise(
+    Weighted_Average = sum(Average * `# Children`) / sum(`# Children`),
+    Total_Children = sum(`# Children`)
+  ) |>
+  ggplot(aes(x = Category, y = Weighted_Average, fill = Race_Group)) +
+  geom_col(position = position_dodge()) +
+  geom_text(
+    aes(label = paste0("n=", Total_Children)),
+    position = position_dodge(width = 0.9),
+    vjust = -0.2
+  ) +
   labs(
-    title = "Average GOLD Assessment Scores by Category and Race",
+    title = "Weighted Average GOLD Assessment Scores by Category and Race",
+    subtitle = "Counts (n) represent the total number of children contributing to each weighted average.",
     x = "Category",
-    y = "Average Score",
+    y = "Weighted Average Score",
     fill = "Race"
   ) +
-  theme_minimal() 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
 
+    ## `summarise()` has grouped output by 'Category'. You can override using the
+    ## `.groups` argument.
+
 ![](proposal_files/figure-gfm/preliminary-exploratory-data-analysis-bar-graph-1.png)<!-- -->
+
 Our first preliminary exploratory data analysis is a bar graph comparing
-GOLD assessment scores between races. This visualization shows that
-generally, scores are similar between races, but white students tend to
-do slightly better in each category, excluding mathematics, where
-non-white students preform better. Exploring this graph is useful as it
-showed us the limitations of what visualizations work and don’t work
+GOLD assessment scores between races using a weighted average. This
+visualization shows that generally, scores are similar between races,
+except for non-white students scoring significantly better in
+mathematics. Exploring this graph is useful as it showed us the
+importance of a weighted averages in our dataset. When we have different
+number of students, the average value of the score will turn out
+differently. It also shows us what visualizations work and don’t work
 with data regarding race, for example, a ridge plot would not be able to
 show this data because we don’t have enough average data points.

@@ -10,22 +10,22 @@ Data (files) placed in this folder.
 Because of the complex structure of the original dataset, we chose to clean and organize the data in Google Sheets rather than R to simplify the reformatting process. Specifically, we created new columns indicating “yes” or “no” for Dual Language Learners, race, and multi-year students. We also cleaned by consolidating data from all Early Head Start (EHS) programs into unified columns, because the original dataset had some categories arranged in columns and others in rows.
 
 
-`Category` = `which aspect is being tested` 
-`WHE Bottom` = `Bottom widely held expectation scores`
-`WHE Top` = `Top widely held expectation scores` 
-`Average` = `Average scores` 
-`# Children` = `Number of children being tested` 
-`# Below` = `Number of students below average`
-`% Below` = `Percent of students below average`
-`# Meeting` = `Number of students meeting expectations` 
-`% Meeting` = `Percentage of students meeting expectations` 
-` # exceeding` = `Number of students exceeding expectations` 
-`% exceeding` = `The percentage of students exceeding expectations`
-`Time period` = `Fall, winter, or spring trimesters` 
-`Age range` = `The age range of the students` 
-`White` = `If the student is white or not`
-`Dual Language` = `If the student is a dual language learner or not` 
-`Multi-Year` = `If the student is a Multi-Year student or not` 
+`Category` : which aspect is being tested 
+`WHE Bottom` : bottom widely held expectation scores 
+`WHE Top` : top widely held expectation scores
+`Average` : average scores
+`# Children` : number of children being tested
+`# Below` : number of students below average
+`% Below` : percent of students below average
+`# Meeting` : number of students meeting expectations
+`% Meeting` : percentage of students meeting expectations
+` # exceeding` : number of students exceeding expectations 
+`% exceeding` : the percentage of students exceeding expectations
+`Time period` : fall, winter, or spring trimesters 
+`Age range` : the age range of the students 
+`White` : if the student is white or not
+`Dual Language` : if the student is a dual language learner or not 
+`Multi-Year` : if the student is a Multi-Year student or not
 
 EHS_all_students: 
 [1] "Category"    "WHE Bottom"  "WHE Top"     "# Children"  "Average"     "# Below"    

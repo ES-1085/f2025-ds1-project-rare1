@@ -54,22 +54,22 @@ For this project, our research question will explore children's development prog
 Because of the complex structure of the original dataset, we chose to clean and organize the data in Google Sheets rather than R to simplify the reformatting process. Specifically, we created new columns indicating “yes” or “no” for Dual Language Learners, race, and multi-year students. We also cleaned by consolidating data from all Early Head Start (EHS) programs into unified columns, because the original dataset had some categories arranged in columns and others in rows.
 
 
-`Category` = `which aspect is being tested` 
-`WHE Bottom` = `Bottom widely held expectation scores`
-`WHE Top` = `Top widely held expectation scores` 
-`Average` = `Average scores` 
-`# Children` = `Number of children being tested` 
-`# Below` = `Number of students below average`
-`% Below` = `Percent of students below average`
-`# Meeting` = `Number of students meeting expectations` 
-`% Meeting` = `Percentage of students meeting expectations` 
-` # exceeding` = `Number of students exceeding expectations` 
-`% exceeding` = `The percentage of students exceeding expectations`
-`Time period` = `Fall, winter, or spring trimesters` 
-`Age range` = `The age range of the students` 
-`White` = `If the student is white or not`
-`Dual Language` = `If the student is a dual language learner or not` 
-`Multi-Year` = `If the student is a Multi-Year student or not` 
+- `Category` = `which aspect is being tested` 
+- `WHE Bottom` = `Bottom widely held expectation scores`
+- `WHE Top` = `Top widely held expectation scores` 
+- `Average` = `Average scores` 
+- `# Children` = `Number of children being tested` 
+- `# Below` = `Number of students below average`
+- `% Below` = `Percent of students below average`
+- `# Meeting` = `Number of students meeting expectations` 
+- `% Meeting` = `Percentage of students meeting expectations` 
+- ` # exceeding` = `Number of students exceeding expectations` 
+- `% exceeding` = `The percentage of students exceeding expectations`
+- `Time period` = `Fall, winter, or spring trimesters` 
+- `Age range` = `The age range of the students` 
+- `White` = `If the student is white or not`
+- `Dual Language` = `If the student is a dual language learner or not` 
+- `Multi-Year` = `If the student is a Multi-Year student or not` 
 
 
 ```{r dimensions-and-glimpse-all-students}
@@ -107,17 +107,13 @@ X (TBD- waiting for IEP data)
 .`Time period` 
 `White`
 
-Other data needed:
-
-We hope to explore IEP students' development, but we are currently waiting for Early Head Start to upload the data for the 2024-2025 year. This will be variable number 6 which is TBD currently. 
-
 Types of graphs we may want to use:
 
--Line plot - to show the distribution of scores deviating away from the average for each `category`
-- Waffle plots - To compare multi-year and not multi-year students 
--Box Plot - showing the range of average scores
--Bar Graph - to compare students meeting, exceeding, and below expectations 
-- Bar Graph - to compare differences among distinctions like race and language
+- Line plot : to show the distribution of scores deviating away from the average for each `category`
+- Waffle plots : To compare multi-year and not multi-year students 
+- Box Plot : showing the range of average scores
+- Bar Graph : to compare students meeting, exceeding, and below expectations 
+- Bar Graph : to compare differences among distinctions like race and language
 
 
 ```{r preliminary-exploratory-data-analysis-bar-graph}

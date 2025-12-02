@@ -107,6 +107,44 @@ ggsave("plot_1.png")
 
 ### Plot 2: _________
 
+```{r multi-year-plot}
+EHS_multi_year |>
+  mutate(
+    Program_Status = if_else(`Multi-Year` == "yes", "Multi-Year", "First-Year")) |>
+  group_by(Category, Program_Status) |>
+  summarise(
+    Weighted_Average = sum(Average * `# Children`) / sum(`# Children`),
+    Total_Children = sum(`# Children`),
+    .groups = 'drop'
+  ) |>
+  mutate(
+    Legend_Label = paste0(Program_Status, " (n=", Total_Children, ")")
+  ) |>
+  mutate(
+    Category = forcats::fct_reorder(Category, Weighted_Average, .fun = max)
+  ) |>
+  ggplot(aes(x = Category, y = Weighted_Average, fill = Legend_Label)) +
+  geom_col(position = position_dodge()) +
+  labs(
+    title = "Higher Average Gold Assesment Scores for Multi-Year Students",
+    subtitle = "Categories ranked top-down by the highest weighted average score", 
+    y = "Score", 
+    x = " ",
+    fill = "Program Status (Total Children)",
+    caption = "Data reflects scores weighted by child enrollment (n) included in the legend. \n Higher scores on the GOLD assessment indicate greater mastery of developmental objectives."
+  ) +
+  coord_flip() +
+  scale_fill_brewer(palette = "Dark2") +
+    theme(
+    plot.caption = element_text(
+      size = 9, 
+      hjust = 0.5,
+      face = "italic"
+    )
+  )
+```
+
+
 ### Plot 3: ___________
 
 Add more plot sections as needed. Each project should have at least 3 plots, but talk to me if you have fewer than 3.

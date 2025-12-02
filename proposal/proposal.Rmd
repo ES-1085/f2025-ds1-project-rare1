@@ -41,7 +41,7 @@ For this project, our research question will explore children's development prog
 
 3. How does the progress across a year differ for a multi-year student compared to a first time student?
 
-4. What are the effects of IEP students on non-IEP students in the classroom?
+4. How does the proficiency in various categories differ by age range (B-1, 1-2, 2-3)?
 
 5. How does growth for students compare by different seasons (fall to winter, winter to spring)? 
 
@@ -150,3 +150,5 @@ EHS_with_race |>
 ```
 
 Our first preliminary exploratory data analysis is a bar graph comparing GOLD assessment scores between races using a weighted average. This visualization shows that generally, scores are similar between races, except for non-white students scoring significantly better in mathematics. Exploring this graph is useful as it showed us the importance of a weighted averages in our dataset. When we have different number of students, the average value of the score will turn out differently. It also shows us what visualizations work and don't work with data regarding race, for example, a ridge plot would not be able to show this data because we don't have enough average data points.
+
+

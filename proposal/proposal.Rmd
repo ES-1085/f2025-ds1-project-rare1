@@ -150,3 +150,4 @@ EHS_with_race |>
 ```
 
 Our first preliminary exploratory data analysis is a bar graph comparing GOLD assessment scores between races using a weighted average. This visualization shows that generally, scores are similar between races, except for non-white students scoring significantly better in mathematics. Exploring this graph is useful as it showed us the importance of a weighted averages in our dataset. When we have different number of students, the average value of the score will turn out differently. It also shows us what visualizations work and don't work with data regarding race, for example, a ridge plot would not be able to show this data because we don't have enough average data points.
+

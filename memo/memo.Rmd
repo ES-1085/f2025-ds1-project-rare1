@@ -1,6 +1,6 @@
 ---
 title: "Project memo"
-author: "Team Rare"
+author: "Team name"
 output: github_document
 ---
 
@@ -23,51 +23,37 @@ library(broom)
 
 ## Plots
 
-### Plot 1: Average Skill Scores: DLL (Dual Language Learners) vs. Non-DLL Students
+### ggsave example for saving plots
 
-```{r plot-1}
-EHS_Dual_Language |>
-  mutate(
-    DLL_Group = if_else(`Dual Langage` == "Yes", "DLL", "Non-DLL"),
-    `Time Period` = fct_relevel(`Time Period`, 
-                                "Fall 2024/2025", 
-                                "Winter 2024/2025", 
-                                "Spring 2024/2025"),
-    Average = as.numeric(Average)
-  ) |>
-  group_by(Category, DLL_Group, `Time Period`) |>
-  summarise(
-    Weighted_Average = sum(Average * `# Children`, na.rm = TRUE) / sum(`# Children`, na.rm = TRUE),
-    Total_Children = sum(`# Children`, na.rm = TRUE),
-    .groups = "drop"
-  ) |>
-  ggplot(aes(x = `Time Period`, y = Weighted_Average, 
-             color = DLL_Group, group = DLL_Group)) +
-  geom_line(linewidth = 1) +
-  geom_point(size = 2) +
-  facet_wrap(~ Category) +
-  labs(
-    title = "Average Skill Scores: DLL (Dual Language Learners) vs. Non-DLL Students",
-    caption = "Non-DLL students scored higher than DLL students in all skill areas, with both groups improving from Fall to Spring.",
-    x = "Assessment Period (2024–2025 School Year)",
-    y = "Weighted Average Score",
-    color = "Group"
-   ) + scale_x_discrete(
-  labels = c(
-    "Fall 2024/2025" = "Fall",
-    "Winter 2024/2025" = "Winter",
-    "Spring 2024/2025" = "Spring"
-  )
-) +
-  scale_color_brewer(palette = "Set2") + 
-  theme(
-    axis.text.x = element_text(angle = 45, hjust = 1),
-    plot.margin = margin(t = 10, r = 10, b = 40, l = 10),
-    plot.caption = element_text(hjust = 0.5),
-  )
-ggsave("plot_1.png")
+```{r starwars ggsave example}
+p1 <- starwars |>
+  filter(mass < 1000, 
+         species %in% c("Human", "Cerean", "Pau'an", "Droid", "Gungan")) |>
+  ggplot() +
+  geom_point(aes(x = mass, 
+                 y = height, 
+                 color = species)) +
+  labs(x = "Weight (kg)", 
+       y = "Height (m)",
+       color = "Species",
+       title = "Weight and Height of Select Starwars Species",
+       caption = paste("This data comes from the starwars api: https://swapi.py43.com"))
+
+
+ggsave("example-starwars.png", width = 4, height = 4)
+
+ggsave("example-starwars-wide.png", width = 6, height = 4)
 ```
 
+
+
+### Plot 1: _________
+
+#### Data cleanup steps specific to plot 1
+
+These data cleaning sections are optional and depend on if you have some data cleaning steps specific to a particular plot
+
+```{r}
 
 ```
 

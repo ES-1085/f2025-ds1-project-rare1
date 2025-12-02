@@ -60,7 +60,7 @@ These data cleaning sections are optional and depend on if you have some data cl
 
 #### Final Plot 1
 
-```{r plot-1}
+```{r dual-language-plot}
 EHS_Dual_Language |>
   mutate(
     DLL_Group = if_else(`Dual Langage` == "Yes", "DLL", "Non-DLL"),
@@ -100,7 +100,7 @@ EHS_Dual_Language |>
     plot.margin = margin(t = 10, r = 10, b = 40, l = 10),
     plot.caption = element_text(hjust = 0.5),
   )
-ggsave("plot_1.png")
+ggsave("dual-language-plot.png")
 ```
 
 
@@ -157,11 +157,12 @@ age_one <- EHS_all_students |>
     .groups = "drop"
   )
 
-ggplot(age_one, aes(x = Category, y = Weighted_Average)) +
-  geom_col(fill = "brown3") +
+ggplot(age_one, aes(x = reorder(Category, Weighted_Average), y = Weighted_Average)) +
+  geom_col(fill = "#E69F00") +
   labs(
     title = "Proficiency in Categories by Age Range",
     subtitle = "From Year 1 to Year 2",
+    x = "Skills by Catagory", 
     y = "Weighted Average"
   )
 ggsave("ageplot1.png")
@@ -177,12 +178,13 @@ age_two <- EHS_all_students |>
     .groups = "drop"
   )
 
-ggplot(age_two, aes(x = Category, y = Weighted_Average)) +
-  geom_col(fill = "orange2") +
+ggplot(age_two, aes(x = reorder(Category, Weighted_Average), y = Weighted_Average)) +
+  geom_col(fill = "#56B4E9") +
   labs(
     title = "Proficiency in Categories by Age Range",
     subtitle = "From Year 2 to Year 3",
-    y = "Weighted Average"
+    y = "Weighted Average", 
+    x = "Skills by Catagory"
   )
 ggsave("ageplot2.png")
 ```
@@ -197,12 +199,13 @@ age_birth <- EHS_all_students |>
     .groups = "drop"
   )
 
-ggplot(age_birth, aes(x = Category, y = Weighted_Average)) +
-  geom_col(fill = "plum3") +
+ggplot(age_birth, aes(x = reorder(Category, Weighted_Average), y = Weighted_Average)) +
+  geom_col(fill = "#009E73") +
   labs(
     title = "Proficiency in Categories by Age Range",
     subtitle = "From Birth to Year 1",
-    y = "Weighted Average"
+    y = "Weighted Average", 
+     x = "Skills by Catagory"
   ) 
 ggsave("ageplotbirth.png")
 ```

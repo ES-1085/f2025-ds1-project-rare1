@@ -147,7 +147,66 @@ EHS_multi_year |>
 
 ### Plot 3: ___________
 
-Add more plot sections as needed. Each project should have at least 3 plots, but talk to me if you have fewer than 3.
+``` {r agerange1to2}
+age_one <- EHS_all_students |>
+  filter(`age range` == "1-2") |>
+  group_by(Category) |>
+  summarise(
+    Weighted_Average = weighted.mean(Average, `# Children`),
+    Children_N = sum(`# Children`),
+    .groups = "drop"
+  )
+
+ggplot(age_one, aes(x = Category, y = Weighted_Average)) +
+  geom_col(fill = "brown3") +
+  labs(
+    title = "Proficiency in Categories by Age Range",
+    subtitle = "From Year 1 to Year 2",
+    y = "Weighted Average"
+  )
+ggsave("ageplot1.png")
+```
+
+``` {r agerange2to3}
+age_two <- EHS_all_students |>
+  filter(`age range` == "2-3") |>
+  group_by(Category) |>
+  summarise(
+    Weighted_Average = weighted.mean(Average, `# Children`),
+    Children_N = sum(`# Children`),
+    .groups = "drop"
+  )
+
+ggplot(age_two, aes(x = Category, y = Weighted_Average)) +
+  geom_col(fill = "orange2") +
+  labs(
+    title = "Proficiency in Categories by Age Range",
+    subtitle = "From Year 2 to Year 3",
+    y = "Weighted Average"
+  )
+ggsave("ageplot2.png")
+```
+
+``` {r agerangebto1}
+age_birth <- EHS_all_students |>
+  filter(`age range` == "B-1") |>
+  group_by(Category) |>
+  summarise(
+    Weighted_Average = weighted.mean(Average, `# Children`),
+    Children_N = sum(`# Children`),
+    .groups = "drop"
+  )
+
+ggplot(age_birth, aes(x = Category, y = Weighted_Average)) +
+  geom_col(fill = "plum3") +
+  labs(
+    title = "Proficiency in Categories by Age Range",
+    subtitle = "From Birth to Year 1",
+    y = "Weighted Average"
+  ) 
+ggsave("ageplotbirth.png")
+```
+
 
 ### Plot 4: ___________ 
 

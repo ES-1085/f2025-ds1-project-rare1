@@ -194,7 +194,7 @@ ggsave("ageplotbirth.png")
 
 ### Final Plot 4: Comparing GOLD assessment scores of students in the EHS program based on race
 
-```{r race-plot}
+```{r race-plot, fig.alt = Vertical Bar chart comparing the weighted average of the five categories(Physical, Cognitive, Language, Social-Emotional, and Mathematics) by race. Non-white scored higher then white in every category except language.There are 69 non-white students compared with 18 white students. Bar graph is color coded: non-white(purple) and white(yellow).}
 EHS_with_race |>
   mutate(Race_Group = if_else(`White (Yes or No)` == "Yes", "White", "Non-White")) |>
   group_by(Race_Group) |>

@@ -15,6 +15,38 @@ Due to consistency issues across different time periods and categories, we chose
 
 Data was collected by the Promise Early Education Center, assessing children between the ages of birth to three years. The organization looked at the average test results over five key subjects and compared the number of students below/at/above the average at various elementary schools in the Central Maine area. 
 
+## Analysis 
+
+The Promise Early Education data set had a lot of data over the course of multiple years. Initially, the data set we were given was very confusing, as there were a lot of different types of students that were analyzed in the data; however, the types of students per year were very inconsistent. Initially, we wanted to examine students with special needs who were a part of the Individualized Education Program(IEP), however, we simply did not have access to the data surrounding IEP students for enough of the years. We decided that in order to streamline the process, we needed to look at one year specifically. To do this, we looked at all the available data and determined which year had the most diverse array of data we could examine. We settled on the 2024-2025 academic year, and within that year, compared differing types of students. The types we compared are: 
+- Age-Range: We compared students of differing ages, ranging from birth to three years old. We divided the ages into 3 categories: Birth - 1, 1 - 2, and 2 - 3. 
+- Multi-Year: Multi-year students are students who have been with Promise Early Education across multiple years. This way we could see what effect Promise was having on students who had been with the organization for longer period of time. 
+- Race: We divided students by race to examine if race had any effect on a student's success in the classroom. 
+- Dual-Language Learners(DLL): These are students who have English as a second language. We wanted to see if having English as a second language impacted a student's ability to succeed in school. 
+
+We evaluated a student's success in the classroom using the GOLD standard. The GOLD standard compared students in Promise Early Education to the national averages to see if students were below, meeting, or exceeding expectations. We assessed students based on the following six categories: 
+- Cognitive: See if students are demonstrating positive approaches to learning, as well as seeing if they can remember and connect experiences. 
+- Language: Students’ ability to express their thoughts through speech. Also tests students' communication skills. 
+- Literacy: Examines the phonological abilities of students while checking their understanding of the alphabet. 
+- Mathematics: Checks their knowledge of spatial relationships and shapes. Also examines the pattern recognition abilities of students. 
+- Physical: How good are students at balancing, and how well developed are their gross-motor manipulative skills 
+- Social-Emotional: Checks if students can navigate group environments well. Looks at their ability to cooperate constructively in group settings. Additionally looks at a student's ability to sustain positive relationships. 
+
+The first plot we made was a faceted line plot that compared DLL students to non-DLL students across all six categories. Using the weighted average scores, we found that non-DLL students were consistently scoring higher among all categories. This reflects the difficulty that DLL students have in understanding what is going on in the classroom, as well as other unique learning challenges. 
+
+The second plot we made was a bar graph comparing Multi-Year students to Non-Multi-Year students. Again, across all five categories, Multi-Year students consistently scored higher. This graph serves as a testament to the effectiveness of Promise Early Education and insinuates that students who are in the program for longer become more advanced in their learning abilities. 
+
+We decided to split up the age range into three separate plots to get a more nuanced view of each age range's ability per category. We found that across the board, students scored highest in physical, while their lowest was in mathematics. We hypothesize that among students aged 0-3, their gross motor skills develop at a faster rate than their shape or pattern recognition skills. 
+
+Our final plot was a bar graph comparing white and non-white students. Interestingly enough, we found that the non-white students scored higher than the white students in every category except language. We hypothesize that this may be due to the sample size, given that there is a significantly higher number of non-white students than white students. 
+
+
+## Conclusion 
+
+In the process of cleaning our data, we came to understand the importance of organizing and conducting data. We found that Promise's data collection may have benefited from including ID numbers for each student testing, to see students who intersect in multiple categories such as: different race groups, dual-language learners, special education students, etc. Student ID numbers would allow us to distinguish these students, without compromising privacy by using names. In addition, we found that Promise’s original spreadsheets used breaks between categories and date ranges, making the data harder to interpret and analyze. To address this, we arranged all categories vertically in Google Sheets to make the data easier to understand and make meaningful comparisons with. 
+
+Although many factors could have been analyzed, such as the 3–5 age group in Promise’s Head Start program or students with special needs, we focused our plots on dual-language learners and improvements across different age groups throughout the school year. Comparing first-year students with multi-year students also allowed us to identify gaps among marginalized groups and assess the effectiveness of Promise’s program in addressing them.
+
+The analysis we carried out highlights the differences among underrepresented students in vulnerable socio-economic situations and the improvements achieved through Promise’s program, underscoring the organization’s role in helping to close these gaps. This demonstrates how important non-profits like Promise are in mitigating educational inequities and supporting children who face systemic challenges.
 
 
 ## Handout

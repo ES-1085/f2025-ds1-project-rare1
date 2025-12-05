@@ -1,6 +1,6 @@
 ---
 title: "Project memo"
-author: "Team name"
+author: "RARE"
 output: github_document
 ---
 
@@ -14,12 +14,6 @@ library(broom)
 ## Data Clean Up Steps for Overall Data
 
 Since the data that we received from Promise Early education was not formatted well to put into R and would be extremely complicated to clean up using code, we did all of our data cleaning in Google sheets. This included formatting all variables into columns, and adding factors such as race, years participated in the program, language status, year, etc. for groups of students. 
-
-```{r}
-
-```
-
-### Step 2: ________
 
 ## Plots
 
@@ -142,6 +136,7 @@ EHS_multi_year |>
       face = "italic"
     )
   )
+ggsave("multi-year-vs-single-year.png", width = 4, height = 4)
 ```
 
 

@@ -67,8 +67,8 @@ investigate are:
 3.  How does the progress across a year differ for a multi-year student
     compared to a first time student?
 
-4.  How does the proficiency in various categories differ by age range
-    (B-1, 1-2, 2-3)?
+4.  What are the effects of IEP students on non-IEP students in the
+    classroom?
 
 5.  How does growth for students compare by different seasons (fall to
     winter, winter to spring)?
@@ -257,9 +257,10 @@ EHS_with_race |>
   geom_col(position = position_dodge()) +
   geom_text(
     aes(label = paste0("n=", Total_Children)),
-    position = position_dodge(width = 0.9),
-    vjust = -0.2
+    position = position_dodge(width = 1),
+    vjust = -0.1
   ) +
+  scale_fill_viridis_d()+
   labs(
     title = "Weighted Average GOLD Assessment Scores by Category and Race",
     subtitle = "Counts (n) represent the total number of children contributing to each weighted average.",

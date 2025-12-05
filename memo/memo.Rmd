@@ -13,7 +13,7 @@ library(broom)
 
 ## Data Clean Up Steps for Overall Data
 
-### Step 1: _________
+Since the data that we received from Promise Early education was not formatted well to put into R and would be extremely complicated to clean up using code, we did all of our data cleaning in Google sheets. This included formatting all variables into columns, and adding factors such as race, years participated in the program, language status, year, etc. for groups of students. 
 
 ```{r}
 

@@ -15,50 +15,9 @@ library(broom)
 
 Since the data that we received from Promise Early education was not formatted well to put into R and would be extremely complicated to clean up using code, we did all of our data cleaning in Google sheets. This included formatting all variables into columns, and adding factors such as race, years participated in the program, language status, year, etc. for groups of students. 
 
-```{r}
-
-```
-
-### Step 2: ________
-
 ## Plots
 
-### ggsave example for saving plots
-
-```{r starwars ggsave example}
-p1 <- starwars |>
-  filter(mass < 1000, 
-         species %in% c("Human", "Cerean", "Pau'an", "Droid", "Gungan")) |>
-  ggplot() +
-  geom_point(aes(x = mass, 
-                 y = height, 
-                 color = species)) +
-  labs(x = "Weight (kg)", 
-       y = "Height (m)",
-       color = "Species",
-       title = "Weight and Height of Select Starwars Species",
-       caption = paste("This data comes from the starwars api: https://swapi.py43.com"))
-
-
-ggsave("example-starwars.png", width = 4, height = 4)
-
-ggsave("example-starwars-wide.png", width = 6, height = 4)
-```
-
-
-
-### Plot 1: _________
-
-#### Data cleanup steps specific to plot 1
-
-These data cleaning sections are optional and depend on if you have some data cleaning steps specific to a particular plot
-
-```{r}
-
-```
-
-
-#### Final Plot 1
+#### Final Plot 1: Comparing GOLD assesment scores of Dual Language vs. Non Dual-Language Learners 
 
 ```{r dual-language-plot}
 EHS_Dual_Language |>
@@ -105,7 +64,7 @@ ggsave("dual-language-plot.png")
 
 
 
-### Plot 2: _________
+### Final Plot 2: Comparing GOLD assesment scores of Multi-Year vs. First Time participants of the Promise Program 
 
 ```{r multi-year-plot}
 EHS_multi_year |>
@@ -145,7 +104,7 @@ EHS_multi_year |>
 ```
 
 
-### Plot 3: ___________
+### Final Plot 3: Comparing progress of GOLD assesment scores fro different ages of the Early Head Start Program (EHS)
 
 ``` {r agerange1to2}
 age_one <- EHS_all_students |>
@@ -211,7 +170,7 @@ ggsave("ageplotbirth.png")
 ```
 
 
-### Plot 4: ___________ 
+### Final Plot 4: Comparing GOLD assesment scores of students in the EHS program based on race
 
 ```{r race-plot}
 EHS_with_race |>

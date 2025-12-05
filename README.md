@@ -10,6 +10,13 @@ Focusing on the critical role early education plays in a child’s overall devel
 
 Due to consistency issues across different time periods and categories, we chose to focus on progress for the Early Head Start Program (ages 0-3) across the 2024-2025 year rather than more longitudinally. The primary goal of this project is to quantify the developmental impact of Promise Early Education's comprehensive services on its Early Head Start participants during this time period.
 
+
+## Methods
+
+Data was collected by the Promise Early Education Center, assessing children between the ages of birth to three years. The organization looked at the average test results over five key subjects and compared the number of students below/at/above the average at various elementary schools in the Central Maine area. 
+
+
+
 ## Handout
 
 Our handout can be found [here](handout/handout.pdf.pdf).

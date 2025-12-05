@@ -1,6 +1,6 @@
 ---
 title: "Project memo"
-author: "RARE"
+author: "Team name"
 output: github_document
 ---
 
@@ -14,6 +14,12 @@ library(broom)
 ## Data Clean Up Steps for Overall Data
 
 Since the data that we received from Promise Early education was not formatted well to put into R and would be extremely complicated to clean up using code, we did all of our data cleaning in Google sheets. This included formatting all variables into columns, and adding factors such as race, years participated in the program, language status, year, etc. for groups of students. 
+
+```{r}
+
+```
+
+### Step 2: ________
 
 ## Plots
 
@@ -136,7 +142,6 @@ EHS_multi_year |>
       face = "italic"
     )
   )
-ggsave("multi-year-vs-single-year.png", width = 4, height = 4)
 ```
 
 
@@ -208,3 +213,29 @@ ggsave("ageplotbirth.png")
 
 ### Plot 4: ___________ 
 
+```{r race-plot}
+EHS_with_race |>
+  mutate(Race_Group = if_else(`White (Yes or No)` == "Yes", "White", "Non-White")) |>
+  group_by(Category, Race_Group) |>
+  summarise(
+    Weighted_Average = sum(Average * `# Children`) / sum(`# Children`),
+    Total_Children = sum(`# Children`)
+  ) |>
+  ggplot(aes(x = Category, y = Weighted_Average, fill = Race_Group)) +
+  geom_col(position = position_dodge()) +
+  geom_text(
+    aes(label = paste0("n=", Total_Children)),
+    position = position_dodge(width = 1),
+    vjust = -0.1
+  ) +
+  scale_fill_viridis_d()+
+  labs(
+    title = "Weighted Average GOLD Assessment Scores by Category and Race",
+    subtitle = "Counts (n) represent the total number of children contributing to each weighted average.",
+    x = "Category",
+    y = "Weighted Average Score",
+    fill = "Race"
+  ) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+ggsave("raceplot.png")
+```

@@ -136,9 +136,10 @@ EHS_with_race |>
   geom_col(position = position_dodge()) +
   geom_text(
     aes(label = paste0("n=", Total_Children)),
-    position = position_dodge(width = 0.9),
-    vjust = -0.2
+    position = position_dodge(width = 1),
+    vjust = -0.1
   ) +
+  scale_fill_viridis_d()+
   labs(
     title = "Weighted Average GOLD Assessment Scores by Category and Race",
     subtitle = "Counts (n) represent the total number of children contributing to each weighted average.",

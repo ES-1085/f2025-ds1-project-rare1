@@ -82,7 +82,9 @@ ggsave("dual-language-plot.png")
 
 ### Final Plot 2: Comparing GOLD assessment scores of Multi-Year vs. First Time participants of the Promise Program 
 
-```{r multi-year-plot}
+Using an accessible color palette, we looked the GOLD assement scores for multi-year vs first time particiants of the Promise program.  We looked the weighted averageof the scores for each category, for First-Year participants, the sample size is 30 children, and for Multi-Year participants, the sample size is  51 children. We organized the bar graph with the catgories on the axis, and scores on the x-axis, and ordered them based on the highest weighted average score (from top down). The graph shows higher scores in each category for multi-year students, proving the effectivness of the Promise curriculum. 
+
+```{r multi-year-plot, fig.alt = Bar Chart of GOLD Assessment Scores for Multi-Year Students: Compares the weighted average scores of First-Year, n=30 studnts, and Multi-Year, n=51 students, participants across six developmental categories. The chart shows that Multi-Year students achieved higher average scores in all six developmental areas, indicating greater mastery of developmental objectives.}
 EHS_multi_year |>
   mutate(
     Program_Status = if_else(`Multi-Year` == "yes", "Multi-Year", "First-Year")) |>
@@ -117,6 +119,7 @@ EHS_multi_year |>
       face = "italic"
     )
   )
+ggsave("multi-year-plot.png")
 ```
 
 

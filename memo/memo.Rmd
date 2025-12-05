@@ -128,7 +128,7 @@ EHS_multi_year |>
 We initially started with a specific color palate but changed the colors to a more accessible color pattern. Furthermore, we reordered the bars in each bar graph in numerical order. In these graphs, we focused on how different age groups impacted the weighted average assessment scores for GOLD across various categories. Mathematics, regardless of age, consistently scored the lowest while Physical scored the highest. This relatively similar trend occurred over all three tested age ranges, with only the average values increasing. The graphs were also focused on the time period between three seasons: Fall 2024/2025, Winter 2024/2025, and Spring 2024/2025. 
 
 
-``` {r agerange1to2}
+``` {r agerange1to2, fig.alt = "Vertical bar chart looking at the five different categories and the weighted average per category for ages 1 to 2 to show how age changes progress and how certain categories like mathematics have lower average scores"}
 age_one <- EHS_all_students |>
   filter(`age range` == "1-2") |>
   group_by(Category) |>
@@ -149,7 +149,7 @@ ggplot(age_one, aes(x = reorder(Category, Weighted_Average), y = Weighted_Averag
 ggsave("ageplot1.png")
 ```
 
-``` {r agerange2to3}
+``` {r agerange2to3, fig.alt = "Vertical bar chart looking at the five different categories and the weighted average per category for ages 2 to 3 to show how age changes progress and how certain categories like physical have higher average scores"}
 age_two <- EHS_all_students |>
   filter(`age range` == "2-3") |>
   group_by(Category) |>
@@ -170,7 +170,7 @@ ggplot(age_two, aes(x = reorder(Category, Weighted_Average), y = Weighted_Averag
 ggsave("ageplot2.png")
 ```
 
-``` {r agerangebto1}
+``` {r agerangebto1, fig.alt = "Vertical bar chart looking at the five different categories and the weighted average per category for ages birth to 1 to show how age changes progress and how certain categories have similar trends to previous ages"}
 age_birth <- EHS_all_students |>
   filter(`age range` == "B-1") |>
   group_by(Category) |>

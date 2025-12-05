@@ -1,6 +1,6 @@
-Project memo
+Promise Early Education
 ================
-Team name
+RARE
 
 This document should contain a detailed account of the data clean up for
 your data and the design choices you are making for your plots. For
@@ -169,7 +169,7 @@ ggplot(age_one, aes(x = reorder(Category, Weighted_Average), y = Weighted_Averag
   )
 ```
 
-![](memo_files/figure-gfm/agerange1to2-1.png)<!-- -->
+<img src="memo_files/figure-gfm/agerange1to2-1.png" alt="Vertical bar chart looking at the five different categories and the weighted average per category for ages 1 to 2 to show how age changes progress and how certain categories like mathematics have lower average scores"  />
 
 ``` r
 ggsave("ageplot1.png")
@@ -197,7 +197,7 @@ ggplot(age_two, aes(x = reorder(Category, Weighted_Average), y = Weighted_Averag
   )
 ```
 
-![](memo_files/figure-gfm/agerange2to3-1.png)<!-- -->
+<img src="memo_files/figure-gfm/agerange2to3-1.png" alt="Vertical bar chart looking at the five different categories and the weighted average per category for ages 2 to 3 to show how age changes progress and how certain categories like physical have higher average scores"  />
 
 ``` r
 ggsave("ageplot2.png")
@@ -225,7 +225,7 @@ ggplot(age_birth, aes(x = reorder(Category, Weighted_Average), y = Weighted_Aver
   ) 
 ```
 
-![](memo_files/figure-gfm/agerangebto1-1.png)<!-- -->
+<img src="memo_files/figure-gfm/agerangebto1-1.png" alt="Vertical bar chart looking at the five different categories and the weighted average per category for ages birth to 1 to show how age changes progress and how certain categories have similar trends to previous ages"  />
 
 ``` r
 ggsave("ageplotbirth.png")

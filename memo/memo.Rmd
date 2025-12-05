@@ -1,6 +1,6 @@
 ---
-title: "Project memo"
-author: "Team name"
+title: "Promise Early Education"
+author: "RARE"
 output: github_document
 ---
 

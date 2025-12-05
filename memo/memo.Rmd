@@ -17,7 +17,7 @@ Since the data that we received from Promise Early education was not formatted w
 
 ## Plots
 
-#### Final Plot 1: Comparing GOLD assesment scores of Dual Language vs. Non Dual-Language Learners 
+#### Final Plot 1: Comparing GOLD assessment scores of Dual Language vs. Non Dual-Language Learners 
 
 ```{r dual-language-plot}
 EHS_Dual_Language |>
@@ -64,7 +64,7 @@ ggsave("dual-language-plot.png")
 
 
 
-### Final Plot 2: Comparing GOLD assesment scores of Multi-Year vs. First Time participants of the Promise Program 
+### Final Plot 2: Comparing GOLD assessment scores of Multi-Year vs. First Time participants of the Promise Program 
 
 ```{r multi-year-plot}
 EHS_multi_year |>
@@ -104,7 +104,10 @@ EHS_multi_year |>
 ```
 
 
-### Final Plot 3: Comparing progress of GOLD assesment scores fro different ages of the Early Head Start Program (EHS)
+### Final Plot 3: Comparing progress of GOLD assessment scores from different ages of the Early Head Start Program (EHS)
+
+We initially started with a specific color palate but changed the colors to a more accessible color pattern. Furthermore, we reordered the bars in each bar graph in numerical order. In these graphs, we focused on how different age groups impacted the weighted average assessment scores for GOLD across various categories. Mathematics, regardless of age, consistently scored the lowest while Physical scored the highest. This relatively similar trend occurred over all three tested age ranges, with only the average values increasing. The graphs were also focused on the time period between three seasons: Fall 2024/2025, Winter 2024/2025, and Spring 2024/2025. 
+
 
 ``` {r agerange1to2}
 age_one <- EHS_all_students |>
@@ -170,7 +173,7 @@ ggsave("ageplotbirth.png")
 ```
 
 
-### Final Plot 4: Comparing GOLD assesment scores of students in the EHS program based on race
+### Final Plot 4: Comparing GOLD assessment scores of students in the EHS program based on race
 
 ```{r race-plot}
 EHS_with_race |>

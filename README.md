@@ -62,7 +62,7 @@ A link to the code and how we created our graphics in our memo can be found [her
 
 ## Data
 
-Due to privacy reasons, our dataset is not accessible online, but those interested in learning more about the dataset could reach out to Promise Early Education. 
+Due to privacy reasons, our dataset is not accessible online, but those interested in learning more about the dataset could reach out to Promise Early Education.  
 
 ## References
 

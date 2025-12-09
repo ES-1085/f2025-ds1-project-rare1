@@ -82,9 +82,9 @@ ggsave("dual-language-plot.png")
 
 ### Final Plot 2: Comparing GOLD assessment scores of Multi-Year vs. First Time participants of the Promise Program 
 
-Using an accessible color palette, we looked the GOLD assement scores for multi-year vs first time particiants of the Promise program.  We looked the weighted averageof the scores for each category, for First-Year participants, the sample size is 30 children, and for Multi-Year participants, the sample size is  51 children. We organized the bar graph with the catgories on the axis, and scores on the x-axis, and ordered them based on the highest weighted average score (from top down). The graph shows higher scores in each category for multi-year students, proving the effectivness of the Promise curriculum. 
+Using an accessible color palette, we looked at the GOLD assessment scores for multi-year vs first time participants of the Promise program.  We looked at the weighted average of the scores for each category. For First-Year participants, the sample size is 30 children, and for Multi-Year participants, the sample size is  51 children. We organized the bar graph with the categories on the axis, and scores on the x-axis, and ordered them based on the highest weighted average score (from top down). The graph shows higher scores in each category for multi-year students, proving the effectiveness of the Promise curriculum. 
 
-```{r multi-year-plot, fig.alt = Bar Chart of GOLD Assessment Scores for Multi-Year Students: Compares the weighted average scores of First-Year, n=30 studnts, and Multi-Year, n=51 students, participants across six developmental categories. The chart shows that Multi-Year students achieved higher average scores in all six developmental areas, indicating greater mastery of developmental objectives.}
+```{r multi-year-plot, fig.alt = Bar Chart of GOLD Assessment Scores for Multi-Year Students: Compares the weighted average scores of First-Year, n=30 students, and Multi-Year, n=51 students, participants across six developmental categories. The chart shows that Multi-Year students achieved higher average scores in all six developmental areas, indicating greater mastery of developmental objectives.}
 EHS_multi_year |>
   mutate(
     Program_Status = if_else(`Multi-Year` == "yes", "Multi-Year", "First-Year")) |>
@@ -103,7 +103,7 @@ EHS_multi_year |>
   ggplot(aes(x = Category, y = Weighted_Average, fill = Legend_Label)) +
   geom_col(position = position_dodge()) +
   labs(
-    title = "Higher Average Gold Assesment Scores for Multi-Year Students",
+    title = "Higher Average Gold Assessment Scores for Multi-Year Students",
     subtitle = "Categories ranked top-down by the highest weighted average score", 
     y = "Score", 
     x = " ",
@@ -143,7 +143,7 @@ ggplot(age_one, aes(x = reorder(Category, Weighted_Average), y = Weighted_Averag
   labs(
     title = "Proficiency in Categories by Age Range",
     subtitle = "From Year 1 to Year 2",
-    x = "Skills by Catagory", 
+    x = "Skills by Category", 
     y = "Weighted Average"
   )
 ggsave("ageplot1.png")
@@ -165,7 +165,7 @@ ggplot(age_two, aes(x = reorder(Category, Weighted_Average), y = Weighted_Averag
     title = "Proficiency in Categories by Age Range",
     subtitle = "From Year 2 to Year 3",
     y = "Weighted Average", 
-    x = "Skills by Catagory"
+    x = "Skills by Category"
   )
 ggsave("ageplot2.png")
 ```
@@ -186,7 +186,7 @@ ggplot(age_birth, aes(x = reorder(Category, Weighted_Average), y = Weighted_Aver
     title = "Proficiency in Categories by Age Range",
     subtitle = "From Birth to Year 1",
     y = "Weighted Average", 
-     x = "Skills by Catagory"
+     x = "Skills by Category"
   ) 
 ggsave("ageplotbirth.png")
 ```
@@ -194,7 +194,7 @@ ggsave("ageplotbirth.png")
 
 ### Final Plot 4: Comparing GOLD assessment scores of students in the EHS program based on race
 
-```{r race-plot, fig.alt = Vertical Bar chart comparing the weighted average of the five categories(Physical, Cognitive, Language, Social-Emotional, and Mathematics) by race. Non-white scored higher then white in every category except language.There are 69 non-white students compared with 18 white students. Bar graph is color coded: non-white(purple) and white(yellow).}
+```{r race-plot}
 EHS_with_race |>
   mutate(Race_Group = if_else(`White (Yes or No)` == "Yes", "White", "Non-White")) |>
   group_by(Race_Group) |>

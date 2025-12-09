@@ -42,11 +42,14 @@ Our final plot was a bar graph comparing white and non-white students. Interesti
 
 ## Conclusion 
 
-In the process of cleaning our data, we came to understand the importance of organizing and conducting data. We found that Promise's data collection may have benefited from including ID numbers for each student testing, to see students who intersect in multiple categories such as: different race groups, dual-language learners, special education students, etc. Student ID numbers would allow us to distinguish these students, without compromising privacy by using names. In addition, we found that Promise’s original spreadsheets used breaks between categories and date ranges, making the data harder to interpret and analyze. To address this, we arranged all categories vertically in Google Sheets to make the data easier to understand and make meaningful comparisons with. 
+In the process of cleaning our data, we came to understand the importance of organizing and conducting data. Promise’s current method of data collection is practical and understandable for day-to-day program needs, but some small adjustments could help streamline future analysis in R. We found that Promise's data collection may have benefited from including ID numbers for each student testing, to see students who intersect in multiple categories such as different race groups, dual-language learners, special education students, etc. Student ID numbers allow analysts to distinguish these students without compromising privacy by using names. Additionally, having all categories and date ranges formatted within a single, continuous table (with consistent column variables such as category, date, score, and number of children) would make the dataset easier to interpret and prepare for quantitative analysis.
 
-Although many factors could have been analyzed, such as the 3–5 age group in Promise’s Head Start program or students with special needs, we focused our plots on dual-language learners and improvements across different age groups throughout the school year. Comparing first-year students with multi-year students also allowed us to identify gaps among marginalized groups and assess the effectiveness of Promise’s program in addressing them.
+Although many factors could have been analyzed, such as the 3–5 age group in Promise’s Head Start program or students with special needs, we focused our plots on dual-language learners and improvements across different age groups throughout the school year. Comparing first-year and multi-year students helped us see how continued enrollment in Promise’s program may lead to cumulative benefits over time. This comparison allowed us to evaluate whether sustained participation in the program helped students improve, particularly those facing barriers related to language or other socio-economic challenges.
 
 The analysis we carried out highlights the differences among underrepresented students in vulnerable socio-economic situations and the improvements achieved through Promise’s program, underscoring the organization’s role in helping to close these gaps. This demonstrates how important non-profits like Promise are in mitigating educational inequities and supporting children who face systemic challenges.
+
+To build on our analysis, future research could examine multiple years of data to analyze longer-term trends, and look at certain classroom practices which contribute to trends we observed, to better understand what drives student improvement over a long period of time. 
+
 
 
 ## Handout
@@ -59,7 +62,7 @@ A link to the code and how we created our graphics in our memo can be found [her
 
 ## Data
 
-https://docs.google.com/spreadsheets/d/1vYpjnj8ux6hzJEDCfFRDqbfvO7_Crm5ePHq_UtH815M/edit?usp=drive_link
+Due to privacy reasons, our dataset is not accessible online, but those interested in learning more about the dataset could reach out to Promise Early Education
 
 ## References
 

@@ -31,7 +31,7 @@ We evaluated a student's success in the classroom using the GOLD standard. The G
 - Physical: How good are students at balancing, and how well developed are their gross-motor manipulative skills 
 - Social-Emotional: Checks if students can navigate group environments well. Looks at their ability to cooperate constructively in group settings. Additionally looks at a student's ability to sustain positive relationships. 
 
-The first plot we made was a faceted line plot that compared DLL students to non-DLL students across all six categories. Using the weighted average scores, we found that non-DLL students were consistently scoring higher among all categories. This reflects the difficulty that DLL students have in understanding what is going on in the classroom, as well as other unique learning challenges. 
+The first plot we made was a faceted line plot that compared DLL students to non-DLL students across all six categories. Using the weighted average scores, we found that non-DLL students were consistently scoring higher among all categories. This reflects the difficulty that DLL students have in understanding what is going on in the classroom, as well as other unique learning challenges. This could represent other external factors at play like sociodemographic factors, which showcase the discrepancy between white and non-white family incomes. 
 
 The second plot we made was a bar graph comparing Multi-Year students to Non-Multi-Year students. Again, across all five categories, Multi-Year students consistently scored higher. This graph serves as a testament to the effectiveness of Promise Early Education and insinuates that students who are in the program for longer become more advanced in their learning abilities. 
 
@@ -66,7 +66,9 @@ Due to privacy reasons, our dataset is not accessible online, but those interest
 
 ## References
 
-“About Promise | Promise Early Education Center.” 2024. Promiseearlyeducation.org. 2024. https://promiseearlyeducation.org/about-us/about-promise/.
+“About Promise|Promise Early Education Center.” 2024. Promiseearlyeducation.org. 2024. https://promiseearlyeducation.org/about-us/about-promise/.
 
 ‌Lambert, Richard. n.d. “Prepared for Teaching Strategies.” https://teachingstrategies.com/wp-content/uploads/2021/08/2020-Tech-Manual_GOLD.pdf.
+
+Clayden, Jonathan D., Steven Hope, Froso Argyri, Sezgi Goksan, Artemis Stefani, Li Wei, and Frederique Jeanne Liegeois. 2023. "The Impact of Multiple Language Exposure on Cognition During Childhood: Evidence from the UK Millennium Cohort Study." Frontiers in Psychology. https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2023.1158333/full
 

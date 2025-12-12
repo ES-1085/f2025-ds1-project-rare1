@@ -128,7 +128,7 @@ ggsave("multi-year-plot.png")
 We initially started with a specific color palate but changed the colors to a more accessible color pattern. Furthermore, we reordered the bars in each bar graph in numerical order. In these graphs, we focused on how different age groups impacted the weighted average assessment scores for GOLD across various categories. Mathematics, regardless of age, consistently scored the lowest while Physical scored the highest. This relatively similar trend occurred over all three tested age ranges, with only the average values increasing. The graphs were also focused on the time period between three seasons: Fall 2024/2025, Winter 2024/2025, and Spring 2024/2025. 
 
 
-``` {r agerange1to2, fig.alt = "Vertical bar chart looking at the five different categories (Physical, Cognitive, Language, Social-Emotional, and Mathematics) and the weighted average per category for ages 1 to 2 showing how age changes progress. display weighted averages of roughly 430, 380, 330, 325. All bars appear same color (gold)."}
+``` {r agerange1to2, fig.alt = "Vertical bar chart looking at the five different categories (Physical, Cognitive, Language, Social-Emotional, and Mathematics) and the weighted average per category for ages 1 to 2 showing how age changes progress. display weighted averages of roughly 430, 380, 330, 325. All bars appear same color (gold). Focuses on each specific age range in the dataset to showcase the relationship between age and test scores across category and how they change as students get older."}
 age_one <- EHS_all_students |>
   filter(`age range` == "1-2") |>
   group_by(Category) |>
@@ -149,7 +149,7 @@ ggplot(age_one, aes(x = reorder(Category, Weighted_Average), y = Weighted_Averag
 ggsave("ageplot1.png")
 ```
 
-``` {r agerange2to3, fig.alt = "Vertical bar chart looking at the five different categories (Physical, Cognitive, Language, Social-Emotional, and Mathematics) and the weighted average per category for ages 2 to 3 showing how age changes progress. display weighted averages of roughly 495, 415, 395, 370, and 270 respectively. All bars appear same color (blue)."}
+``` {r agerange2to3, fig.alt = "Vertical bar chart looking at the five different categories (Physical, Cognitive, Language, Social-Emotional, and Mathematics) and the weighted average per category for ages 2 to 3 showing how age changes progress. display weighted averages of roughly 495, 415, 395, 370, and 270 respectively. All bars appear same color (blue). Focuses on each specific age range in the dataset to showcase the relationship between age and test scores across category and how they change as students get older."}
 age_two <- EHS_all_students |>
   filter(`age range` == "2-3") |>
   group_by(Category) |>
@@ -170,7 +170,7 @@ ggplot(age_two, aes(x = reorder(Category, Weighted_Average), y = Weighted_Averag
 ggsave("ageplot2.png")
 ```
 
-``` {r agerangebto1, fig.alt = "Vertical bar chart looking at the five different categories (Physical, Cognitive, Language, Social-Emotional, and Mathematics) and the weighted average per category for ages birth year to 1 showing how age changes progress. display weighted averages of roughly 50, 200, 200, 215, and 300 respectively. All bars appear same color (green)."}
+``` {r agerangebto1, fig.alt = "Vertical bar chart looking at the five different categories (Physical, Cognitive, Language, Social-Emotional, and Mathematics) and the weighted average per category for ages birth year to 1 showing how age changes progress. display weighted averages of roughly 50, 200, 200, 215, and 300 respectively. All bars appear same color (green).Focuses on each specific age range in the dataset to showcase the relationship between age and test scores across category and how they change as students get older."}
 age_birth <- EHS_all_students |>
   filter(`age range` == "B-1") |>
   group_by(Category) |>
@@ -194,7 +194,9 @@ ggsave("ageplotbirth.png")
 
 ### Final Plot 4: Comparing GOLD assessment scores of students in the EHS program based on race
 
-```{r race-plot}
+We initially started with a specific color palate and with an unlabeled n value (no legend) that represented the number of students per each category per race identification. We then added a legend. The legend showcases the number of children contributing to the weighted average. The graph is a bar chart that shows that non-white students scored higher than white students on every category except for language, which can be skewed by the proportion of the sample sizes.  
+
+```{r race-plot, fig.alt = "A bar chart looking at five different categories (Physical, Cognitive, Language, Social-Emotional, and Mathematics) and the weighted average across difference race groups, defined as "white" or "non-white". Data indicates that non-white students score higher than white students on every category except for language, which hints at a sampling size bias and illustrates that external factors can be at play.}
 EHS_with_race |>
   mutate(Race_Group = if_else(`White (Yes or No)` == "Yes", "White", "Non-White")) |>
   group_by(Race_Group) |>
